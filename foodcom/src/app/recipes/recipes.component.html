@@ -1,0 +1,28 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Picture</th>
+        <th scope="col">Title</th>
+        <th scope="col">Ingradients</th>
+        <th scope="col">Calories</th>
+        <th scope="col">Coocking Time</th>
+        <th scope="col">Allergic</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let recipe of recipes">
+        <th scope="row">{{recipe.id}}</th>
+        <td><img [src]="recipe.picture" width="50" height="50" alt="food picture" class="rounded-lg" class="rounded-sm"/></td>
+        <td>{{recipe.title}}</td>
+        <td>{{recipe.ingredients}}</td>
+        <td>{{recipe.calories}}</td>
+        <td>{{recipe.time}}</td>
+        <td>{{recipe.allerg}}</td>
+        <td>
+          <input type="checkbox" aria-label="Checkbox for following text input">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
