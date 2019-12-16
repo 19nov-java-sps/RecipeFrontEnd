@@ -1,4 +1,5 @@
-<table class="table">
+
+<table class="table-sm">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -10,8 +11,9 @@
         <th scope="col">Allergic</th>
       </tr>
     </thead>
-    <tbody>
-      <tr *ngFor="let recipe of recipes">
+    <tbody >
+     
+      <tr *ngFor="let recipe of recipes.slice(0,3)" >
         <th scope="row">{{recipe.id}}</th>
         <td><img [src]="recipe.picture" width="50" height="50" alt="food picture" class="rounded-lg" class="rounded-sm"/></td>
         <td>{{recipe.title}}</td>
@@ -19,10 +21,17 @@
         <td>{{recipe.calories}}</td>
         <td>{{recipe.time}}</td>
         <td>{{recipe.allerg}}</td>
-        <td>
-          <input type="checkbox" aria-label="Checkbox for following text input">
+        <td ng-form="myForm">
+          
+          <input type="checkbox" (change)="onChange(recipe.id, $event.target.checked)">
+     
         </td>
+      </tr>
+    
+         <tr>
+        <button type="button" class="btn btn-primary float-md-right">Save</button>
       </tr>
     </tbody>
   </table>
+  <pre>Form values: {{myForm.value | json}}</pre>
 
