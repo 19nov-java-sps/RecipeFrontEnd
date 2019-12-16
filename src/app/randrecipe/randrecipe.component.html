@@ -1,0 +1,89 @@
+<h1> Random Recipe of the day </h1>
+
+<table>
+  <tr>
+    <th> Name </th>
+    <th> Image </th>
+    <th> Instructions </th>
+    <th> Ingredients </th>
+  </tr>
+
+  <tr *ngFor="let get of listRandomRecipe.meals">
+    <td>{{get.strMeal}}</td>
+    <td><img src="{{get.strMealThumb}}" height="150" width="170"></td>
+    <td>{{get.strInstructions}}</td>
+    <td>
+      <ol>
+        <li>{{get.strIngredient1}}</li>
+        <li>{{get.strIngredient2}}</li>
+        <li>{{get.strIngredient3}}</li>
+        <li>{{get.strIngredient4}}</li>
+        <li>{{get.strIngredient5}}</li>
+        <li>{{get.strIngredient6}}</li>
+        <li>{{get.strIngredient7}}</li>
+      </ol>
+    </td>
+  </tr>
+</table>
+
+<h1> Three Random Recipes </h1>
+
+<table>
+  <tr>
+    <th> Name </th>
+    <th> Image </th>
+    <th> Instructions </th>
+    <th> Ingredients </th>
+  </tr>
+
+  <tr *ngFor="let get of listRandomRecipe1.meals">
+    <td>{{get.strMeal}}</td>
+    <td><img src="{{get.strMealThumb}}" height="150" width="170"></td>
+    <td>{{get.strInstructions}}</td>
+    <td>
+      <ol>
+        <li>{{get.strIngredient1}}</li>
+        <li>{{get.strIngredient2}}</li>
+        <li>{{get.strIngredient3}}</li>
+        <li>{{get.strIngredient4}}</li>
+        <li>{{get.strIngredient5}}</li>
+        <li>{{get.strIngredient6}}</li>
+        <li>{{get.strIngredient7}}</li>
+      </ol>
+    </td>
+  </tr>
+
+  <tr *ngFor="let get of listRandomRecipe2.meals">
+    <td>{{get.strMeal}}</td>
+    <td><img src="{{get.strMealThumb}}" height="150" width="170"></td>
+    <td>{{get.strInstructions}}</td>
+    <td>
+      <ol>
+        <li>{{get.strIngredient1}}</li>
+        <li>{{get.strIngredient2}}</li>
+        <li>{{get.strIngredient3}}</li>
+        <li>{{get.strIngredient4}}</li>
+        <li>{{get.strIngredient5}}</li>
+        <li>{{get.strIngredient6}}</li>
+        <li>{{get.strIngredient7}}</li>
+      </ol>
+    </td>
+  </tr>
+
+  <tr *ngFor="let get of listRandomRecipe3.meals">
+    <td>{{get.strMeal}}</td>
+    <td><img src="{{get.strMealThumb}}" height="150" width="170"></td>
+    <td>{{get.strInstructions}}</td>
+    <td>
+      <ol>
+        <li>{{get.strIngredient1}}</li>
+        <li>{{get.strIngredient2}}</li>
+        <li>{{get.strIngredient3}}</li>
+        <li>{{get.strIngredient4}}</li>
+        <li>{{get.strIngredient5}}</li>
+        <li>{{get.strIngredient6}}</li>
+        <li>{{get.strIngredient7}}</li>
+      </ol>
+    </td>
+  </tr>
+</table>
