@@ -7,12 +7,14 @@ import { RecipesComponent } from './recipes/recipes.component';
 @NgModule({
   declarations: [
     AppComponent,
-    RecipesComponent,
-    ReactiveFormsModule    
+    RecipesComponent
+    
+     
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

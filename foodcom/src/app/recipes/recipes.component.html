@@ -21,15 +21,17 @@
         <td>{{recipe.calories}}</td>
         <td>{{recipe.time}}</td>
         <td>{{recipe.allerg}}</td>
-        <td ng-form="myForm">
+        <td [formGroup]="myForm">
           
           <input type="checkbox" (change)="onChange(recipe.id, $event.target.checked)">
      
         </td>
       </tr>
     
-         <tr>
-        <button type="button" class="btn btn-primary float-md-right">Save</button>
+         <tr >
+           <td class="text-right">
+        <button type="button" class="btn btn-primary" >Save</button>
+      </td>
       </tr>
     </tbody>
   </table>

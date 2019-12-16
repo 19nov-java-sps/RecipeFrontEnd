@@ -13,12 +13,15 @@ export class RecipesComponent implements OnInit {
 
    myForm: FormGroup;
 
-  constructor(/*private fb: FormBuilder*/) { }
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
     // this.myForm = this.fb.group({
-    //   userrecipe: this.fb.array([])
+    //   firstName: new FormControl()
     // });
+    this.myForm = this.fb.group({
+      userrecipe: this.fb.array([])
+    });
   }
 
   onChange(recipe: string, isChecked: boolean) {
