@@ -1,0 +1,9 @@
+<p>ingrfilter works!</p>
+<ul [formGroup]="myForm2">
+    <li *ngFor="let ingr of ingrfilter"
+          
+    <input type="checkbox" (change)="onChange(ingr.title, $event.target.checked)">
+
+  </ul>
+
+  pre>Form values: {{myForm2.value | json}}</pre>
