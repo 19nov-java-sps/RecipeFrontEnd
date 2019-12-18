@@ -1,9 +1,36 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+        <h2 aling="center">FoodCom</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <!---->
+    </div>
+    <div class="col-4">
+      <h2>Recipe of the day</h2>
+      <img src="https://spoonacular.com/recipeImages/716429-556x370.jpg" width="150" height="150" alt="Recipe of the day" class="rounded-lg" class="rounded-sm"/>
+    </div>
+    <div class="col-4">
+      <h2>Recipe of the month</h2>
+      <img src="https://spoonacular.com/recipeImages/716429-556x370.jpg" width="150" height="150" alt="Recipe of the day" class="rounded-lg" class="rounded-sm"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <h3>{{recipe}}</h3>
+    </div>
+    <div class="col-8">
+      <app-recipes></app-recipes>
+    </div>
+  </div>
 </div>
 
 
-<app-randrecipe></app-randrecipe>
+
+
+
+
