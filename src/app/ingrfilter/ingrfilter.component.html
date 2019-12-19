@@ -1,9 +1,8 @@
-<p>ingrfilter works!</p>
+<h2>Pick your favorit ingradients</h2>
 <ul [formGroup]="myForm2">
-    <li *ngFor="let ingr of ingrfilter"
-          
-    <input type="checkbox" (change)="onChange(ingr.title, $event.target.checked)">
-
+    <li *ngFor="let ingr of ingrfilter">
+     <input type="checkbox" (change)="onChange(ingr.title, $event.target.checked)">
+    </li>
   </ul>
 
-  pre>Form values: {{myForm2.value | json}}</pre>
+  <pre>Form values: {{myForm2.value | json}}</pre>

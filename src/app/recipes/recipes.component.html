@@ -15,7 +15,7 @@
      
       <tr *ngFor="let recipe of recipes.slice(0,3)" >
         <th scope="row">{{recipe.id}}</th>
-        <td><img [src]="recipe.picture" width="50" height="50" alt="food picture" class="rounded-lg" class="rounded-sm"/></td>
+        <td><img [src]="recipe.picture" width="50" height="50" alt="food picture" class="rounded-lg" /></td>
         <td>{{recipe.title}}</td>
         <td>{{recipe.ingredients}}</td>
         <td>{{recipe.calories}}</td>
@@ -34,6 +34,6 @@
       </td>
       </tr>
     </tbody>
-  </table>
+ </table>
   <pre>Form values: {{myForm.value | json}}</pre>
 

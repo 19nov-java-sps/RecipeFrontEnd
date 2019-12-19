@@ -1,5 +1,8 @@
-<h1> Random Recipe of the day </h1>
-
+<div *ngFor="let get of listRandomRecipe.meals">
+<h4 > {{get.strMeal}} </h4>
+<img src="{{get.strMealThumb}}" height="150" width="170" class="rounded-lg">
+</div>
+<!--
 <table>
   <tr>
     <th> Name </th>
@@ -11,18 +14,14 @@
   <tr *ngFor="let get of listRandomRecipe.meals">
     <td>{{get.strMeal}}</td>
     <td><img src="{{get.strMealThumb}}" height="150" width="170"></td>
+    
     <td>{{get.strInstructions}}</td>
     <td>
       <ol>
         <li>{{get.strIngredient1}}</li>
-        <li>{{get.strIngredient2}}</li>
-        <li>{{get.strIngredient3}}</li>
-        <li>{{get.strIngredient4}}</li>
-        <li>{{get.strIngredient5}}</li>
-        <li>{{get.strIngredient6}}</li>
-        <li>{{get.strIngredient7}}</li>
       </ol>
     </td>
+   
   </tr>
 </table>
 
@@ -87,3 +86,4 @@
     </td>
   </tr>
 </table>
+-->
