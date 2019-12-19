@@ -1,6 +1,8 @@
 
 
+<div class="panel panel-default" [ngStyle]="{'background-image': getUrl()}"></div>
 <div class="container-fluid">
+  
   <div class="row">
     <div class="col-12">
         <h2 aling="center">{{title}}</h2>
@@ -17,7 +19,7 @@
     </div>
     <div class="col-4">
       <h2>Recipe of the month</h2>
-      <img src="https://spoonacular.com/recipeImages/716429-556x370.jpg" width="150" height="150" alt="Recipe of the day" class="rounded-lg" class="rounded-sm"/>
+      <app-randrecipe></app-randrecipe>
     </div>
   </div>
   <div class="row">

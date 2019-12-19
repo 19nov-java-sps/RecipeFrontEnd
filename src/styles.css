@@ -1,1 +1,18 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
+
+body, html {
+    height: 100%;
+  }
+  .bg {
+    /* The image used */
+    background-image: url("https://www.freshmealplan.com/Themes/FMPNewTheme/Content/assets/images/home-banner.webp");
+  
+    /* Full height */
+    height: 100%;
+    opacity: 0.5;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

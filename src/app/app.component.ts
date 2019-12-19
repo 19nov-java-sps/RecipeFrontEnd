@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Favorit Recipes Searcher';
+  getUrl()
+{
+  return "url('https://www.freshmealplan.com/Themes/FMPNewTheme/Content/assets/images/home-banner.webp')";
+}
 }
