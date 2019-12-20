@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "project2": {
+    "project2-login": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/project2",
+            "outputPath": "dist/project2-login",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,7 +23,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [],
             "es5BrowserSupport": true
@@ -58,18 +59,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "project2:build"
+            "browserTarget": "project2-login:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "project2:build:production"
+              "browserTarget": "project2-login:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "project2:build"
+            "browserTarget": "project2-login:build"
           }
         },
         "test": {
@@ -103,7 +104,7 @@
         }
       }
     },
-    "project2-e2e": {
+    "project2-login-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -112,11 +113,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "project2:serve"
+            "devServerTarget": "project2-login:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "project2:serve:production"
+              "devServerTarget": "project2-login:serve:production"
             }
           }
         },
@@ -132,5 +133,5 @@
       }
     }
   },
-  "defaultProject": "project2"
+  "defaultProject": "project2-login"
 }

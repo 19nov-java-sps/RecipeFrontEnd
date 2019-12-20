@@ -1,26 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 
+import { HttpClientModule} from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RandrecipeComponent } from './randrecipe/randrecipe.component';
-import { RandomApiService } from './services/Random-Api.service';
-import { KeysPipePipe } from './pipes/keys-pipe.pipe';
-
+import { LoginComponent } from './components/login/login.component';
+import { UserInfoComponent } from './components/user-info/user-info.component';
+import { LoginService } from './services/login.service';
+import { RandrecipeComponent } from './components/randrecipe/randrecipe.component';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
+    UserInfoComponent,
     RandrecipeComponent,
-    KeysPipePipe
+    NavComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-    FormsModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [RandomApiService],
+  providers: [
+    LoginService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
