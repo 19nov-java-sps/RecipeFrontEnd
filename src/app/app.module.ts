@@ -1,30 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 
+import { HttpClientModule} from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RandrecipeComponent } from './randrecipe/randrecipe.component';
-import { RandomApiService } from './services/Random-Api.service';
-import { KeysPipePipe } from './pipes/keys-pipe.pipe';
-import { RecipesComponent } from './recipes/recipes.component';
-import { IngrfilterComponent } from './ingrfilter/ingrfilter.component';
+import { LoginComponent } from './components/login/login.component';
+import { UserInfoComponent } from './components/user-info/user-info.component';
+import { LoginService } from './services/login.service';
+import { RandrecipeComponent } from './components/randrecipe/randrecipe.component';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
+    UserInfoComponent,
     RandrecipeComponent,
-    KeysPipePipe, 
-    RecipesComponent,
-    IngrfilterComponent
+    NavComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    LoginService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

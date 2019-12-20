@@ -1,15 +1,19 @@
-<div *ngFor="let get of listRandomRecipe.meals">
-<h4 > {{get.strMeal}} </h4>
-<img src="{{get.strMealThumb}}" height="150" width="170" class="rounded-lg">
+<div class="container">
+  <app-nav></app-nav>
+  <button class="btn btn-primary" (click)="clear()">Logout</button>
 </div>
-<!--
-<table>
-  <tr>
-    <th> Name </th>
-    <th> Image </th>
-    <th> Instructions </th>
-    <th> Ingredients </th>
-  </tr>
+
+<h1> Random Recipe of the day </h1>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th> Name </th>
+      <th> Image </th>
+      <th> Instructions </th>
+      <th> Ingredients </th>
+    </tr>
+  </thead>
 
   <tr *ngFor="let get of listRandomRecipe">
     <td>{{get.strMeal}}</td>
@@ -27,12 +31,14 @@
 
 <h1> Recipe of the Month </h1>
 
-<table>
-  <tr>
-    <th> Name </th>
-    <th> Image </th>
-    <th> URL </th>
-  </tr>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th> Name </th>
+      <th> Image </th>
+      <th> URL </th>
+    </tr>
+  </thead>
 
   <tr *ngFor="let get of listMonthRecipe">
     <td>{{get.recipeName}}</td>
@@ -43,13 +49,15 @@
 
 <h1> Three Random Recipes </h1>
 
-<table>
-  <tr>
-    <th> Name </th>
-    <th> Image </th>
-    <th> Instructions </th>
-    <th> Ingredients </th>
-  </tr>
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th> Name </th>
+      <th> Image </th>
+      <th> Instructions </th>
+      <th> Ingredients </th>
+    </tr>
+  </thead>
 
   <tr *ngFor="let get of listRandomRecipe1">
     <td>{{get.strMeal}}</td>

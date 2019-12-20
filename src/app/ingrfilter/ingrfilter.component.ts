@@ -13,6 +13,7 @@ export class IngrfilterComponent implements OnInit {
   ingrfilter = INGRS;
 
   myForm2: FormGroup;
+  static ingrformArray: string;
 
   constructor(private fb: FormBuilder) { }
 
@@ -21,6 +22,8 @@ export class IngrfilterComponent implements OnInit {
       useringr: this.fb.array([])
     });
   }
+
+  
 
   onChange(ingr: string, isChecked: boolean) {
 
@@ -31,7 +34,7 @@ export class IngrfilterComponent implements OnInit {
     let index = ingrFormArray.controls.findIndex(x => x.value ==ingr)
     ingrFormArray.removeAt(index);
   }
-    
+  return ingrFormArray;
   }
 
 }
