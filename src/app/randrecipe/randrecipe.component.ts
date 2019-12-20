@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { RandomApiService } from '../services/Random-Api.service';
 import { RandomRecipe } from '../models/RandomRecipe';
-import { RandomRecipe2 } from '../models/RandomRecipe2'
+import { RandomRecipe2 } from '../models/RandomRecipe2';
+import { Month } from '../models/Month';
 
 @Component({
   selector: 'app-randrecipe',
@@ -16,6 +17,8 @@ export class RandrecipeComponent implements OnInit {
   listRandomRecipe2: RandomRecipe[];
   listRandomRecipe3: RandomRecipe[];
 
+  listMonthRecipe: Month[];
+
   constructor(private randomApi: RandomApiService) { }
 
   ngOnInit() {
@@ -24,14 +27,9 @@ export class RandrecipeComponent implements OnInit {
     .subscribe(
       data=>
       {
-        this.listRandomRecipe = data;
-      }
-    );
-    this.randomApi.getRandomRecipe()
-    .subscribe(
-      data=>
-      {
-        this.listRandomRecipe1 = data;
+        for(let i=0; i<data.meals.length; i++){
+          this.listRandomRecipe = data.meals;
+        }
       }
     );
 
@@ -39,7 +37,9 @@ export class RandrecipeComponent implements OnInit {
     .subscribe(
       data=>
       {
-        this.listRandomRecipe2 = data;
+        for(let i=0; i<data.meals.length; i++){
+          this.listRandomRecipe1 = data.meals;
+        }
       }
     );
 
@@ -47,9 +47,30 @@ export class RandrecipeComponent implements OnInit {
     .subscribe(
       data=>
       {
-        this.listRandomRecipe3 = data;
+        for(let i=0; i<data.meals.length; i++){
+          this.listRandomRecipe2 = data.meals;
+        }
       }
     );
+
+    this.randomApi.getRandomRecipe()
+    .subscribe(
+      data=>
+      {
+        for(let i=0; i<data.meals.length; i++){
+          this.listRandomRecipe3 = data.meals;
+        }
+      }
+    );
+
+    this.randomApi.getMonthRecipe()
+    .subscribe(
+      data=>
+      {
+        this.listMonthRecipe = data;
+      }
+    );
+
   }
 
 }
