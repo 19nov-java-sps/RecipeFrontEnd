@@ -3,12 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { UserInfoComponent } from './components/user-info/user-info.component';
 import { RandrecipeComponent } from './components/randrecipe/randrecipe.component';
+import { FavoritesComponent } from './components/favorites/favorites.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/login", pathMatch: "full"},
   { path: "login", component: LoginComponent },
   { path: "RandRecipe", component: RandrecipeComponent},
-  { path: "user-info", component: UserInfoComponent}
+  { path: "Favorites", component: FavoritesComponent}
 ];
 
 @NgModule({

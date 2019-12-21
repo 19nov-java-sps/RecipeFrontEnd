@@ -1,0 +1,35 @@
+<div class="container">
+  <app-nav></app-nav>
+  <button class="btn btn-primary" (click)="clear()">Logout</button>
+</div>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th> Id </th>
+    </tr>
+  </thead>
+
+  <tr *ngFor="let get of listFavoriteRecipes">
+    <td><input placeholder="{{get.apiId}}" readonly></td>
+  </tr>
+</table>
+<input #myapiid type="text" class="form-control" placeholder="Enter ID" autocomplete="off">
+<button class="btn btn-success" (click)="sendData(myapiid.value)">Get Favorites</button>
+<p>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th> Name </th>
+      <th> Image </th>
+      <th> Instructions </th>
+    </tr>
+  </thead>
+
+  <tr *ngFor="let get of listFavoriteRecipes1">
+    <td>{{get.strMeal}}</td>
+    <td><img src="{{get.strMealThumb}}" height="150" width="170"></td>
+    <td>{{get.strInstructions}}</td>
+
+  </tr>
+</table>

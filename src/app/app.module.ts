@@ -9,6 +9,7 @@ import { UserInfoComponent } from './components/user-info/user-info.component';
 import { LoginService } from './services/login.service';
 import { RandrecipeComponent } from './components/randrecipe/randrecipe.component';
 import { NavComponent } from './components/nav/nav.component';
+import { FavoritesComponent } from './components/favorites/favorites.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NavComponent } from './components/nav/nav.component';
     LoginComponent,
     UserInfoComponent,
     RandrecipeComponent,
-    NavComponent
+    NavComponent,
+    FavoritesComponent
   ],
   imports: [
     BrowserModule,
