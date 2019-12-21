@@ -8,6 +8,8 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class LoginComponent implements OnInit {
 
+  private displayError: string;
+
   constructor(private loginService: LoginService) { }
 
   ngOnInit() {
@@ -15,6 +17,7 @@ export class LoginComponent implements OnInit {
 
   reqLogin(username: string, password: string) {
     this.loginService.authenticate(username, password);
+    this.displayError = this.loginService.errormessage;
   }
 
 }

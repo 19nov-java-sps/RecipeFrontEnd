@@ -9,6 +9,8 @@ export class LoginService {
 
   constructor(private http: HttpClient, private router: Router) { }
 
+  public errormessage= '';
+
   // url to send requests to the backend.
   private url: string = "http://localhost:8080/RecipeBackEnd/login";
   // body to send the username and password.
@@ -43,6 +45,9 @@ export class LoginService {
       this.auth = (response["headers"].get("Authorization"));
       sessionStorage.setItem("token", this.auth);
       this.router.navigate(["RandRecipe"]);
+    },
+    error =>{
+      this.errormessage = "Invalid username or password";
     });
   }
 }
