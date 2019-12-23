@@ -10,6 +10,7 @@ import { LoginService } from './services/login.service';
 import { RandrecipeComponent } from './components/randrecipe/randrecipe.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
+import { RecipesComponent} from './recipes/recipes.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +19,19 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
     UserInfoComponent,
     RandrecipeComponent,
     NavComponent,
-    FavoritesComponent
+    FavoritesComponent,
+    RecipesComponent,
+    AppRoutingModule
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
+    
+  ],
+  exports: [
+    AppRoutingModule
+    
   ],
   providers: [
     LoginService

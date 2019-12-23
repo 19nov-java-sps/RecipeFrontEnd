@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {RECIPES} from '../mock-recipes';
 import { FormGroup, FormBuilder, FormArray, FormControl } from '@angular/forms';
 import { RecipeService } from '../services/recipe.service';
-import { JsonPipe } from '@angular/common';
+import { AppRoutingModule } from '../app-routing.module';
+import { Router } from '@angular/router';
+
+
 @Component({
   selector: 'app-recipes',
   templateUrl: './recipes.component.html',
