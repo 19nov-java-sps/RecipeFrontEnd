@@ -21,6 +21,9 @@
         <td>{{recipe.calories}}</td>
         <td>{{recipe.time}}</td>
         <td>{{recipe.allerg}}</td>
+        <td><button (click)="add(recipe.id.value); recipe.id.value=''">
+          add
+      </button></td>
         <td [formGroup]="myForm">
           
           <input type="checkbox" (change)="onChange(recipe.id, $event.target.checked)">
