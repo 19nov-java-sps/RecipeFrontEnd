@@ -5,15 +5,15 @@
   <thead class="thead-dark">
     <tr>
       <th> Id </th>
+      <th> Search </th>
     </tr>
   </thead>
 
   <tr *ngFor="let get of listFavoriteRecipes">
-    <td><input placeholder="{{get.apiId}}" readonly></td>
+    <td>{{get.apiId}}</td>
+    <td><button class="btn btn-success" (click)="sendData(get.apiId)">Show Favorite</button></td>
   </tr>
 </table>
-<input #myapiid type="text" class="form-control" placeholder="Enter ID" autocomplete="off">
-<button class="btn btn-success" (click)="sendData(myapiid.value)">Get Favorites</button>
 <p>
 <table class="table">
   <thead class="thead-dark">

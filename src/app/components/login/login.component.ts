@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
   reqLogin(username: string, password: string) {
     this.loginService.authenticate(username, password);
     this.displayError = this.loginService.errormessage;
+    
   }
 
 }

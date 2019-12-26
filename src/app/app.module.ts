@@ -10,7 +10,7 @@ import { LoginService } from './services/login.service';
 import { RandrecipeComponent } from './components/randrecipe/randrecipe.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
-import { RecipesComponent} from './recipes/recipes.component';
+import { AdminportalComponent } from './components/adminportal/adminportal.component';
 
 @NgModule({
   declarations: [
@@ -20,8 +20,7 @@ import { RecipesComponent} from './recipes/recipes.component';
     RandrecipeComponent,
     NavComponent,
     FavoritesComponent,
-    RecipesComponent,
-    AppRoutingModule
+    AdminportalComponent
   ],
   imports: [
     BrowserModule,

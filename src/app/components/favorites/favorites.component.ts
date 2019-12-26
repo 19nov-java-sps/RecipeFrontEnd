@@ -18,6 +18,15 @@ export class FavoritesComponent implements OnInit {
   listFavoriteRecipes1: FavModel1[];
 
   ngOnInit() {
+
+    if (sessionStorage.getItem("token")) {
+      console.log("token", this.token);
+    } else {
+      // if there is no token in the sessionStorage then navigate to the login view.
+      this.router.navigate(["login"]);
+      console.log("no token");
+    }
+
     this.myfavorite.getFavoriteId()
     .subscribe(
       data=>
