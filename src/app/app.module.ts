@@ -11,6 +11,8 @@ import { RandrecipeComponent } from './components/randrecipe/randrecipe.componen
 import { NavComponent } from './components/nav/nav.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { AdminportalComponent } from './components/adminportal/adminportal.component';
+import { RecipesSearchComponent } from './components/recipes-search/recipes-search.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,12 +22,15 @@ import { AdminportalComponent } from './components/adminportal/adminportal.compo
     RandrecipeComponent,
     NavComponent,
     FavoritesComponent,
-    AdminportalComponent
+    AdminportalComponent,
+    RecipesSearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpClientModule, 
+    FormsModule
     
   ],
   exports: [

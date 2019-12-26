@@ -12,7 +12,7 @@ export class LoginService {
   public errormessage= '';
 
   // url to send requests to the backend.
-  private url: string = "http://localhost:8080/RecipeBackEnd/login";
+  private url: string = "http://recipebackend-env.3fcysiv2nc.us-east-2.elasticbeanstalk.com/login";
   // body to send the username and password.
   private body: string;
   /*
