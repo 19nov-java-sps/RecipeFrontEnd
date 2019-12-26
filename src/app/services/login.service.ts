@@ -39,12 +39,24 @@ export class LoginService {
     the user-info component is just for testing. instead of navigating to it, navigate
     to one of the components you did.
   */
+  private tokenArr: string[];
+
   authenticate (username: string, password: string) {
     this.body = `username=${username}&password=${password}`;
     this.http.post(`${this.url}`,this.body,this.httpOptions).subscribe( response => {
       this.auth = (response["headers"].get("Authorization"));
       sessionStorage.setItem("token", this.auth);
-      this.router.navigate(["RandRecipe"]);
+      let token = sessionStorage.getItem("token");
+
+      this.tokenArr = token.split(":");
+      let myuserrole = this.tokenArr[2];
+      // let myuserrole = "admin";
+
+      if(myuserrole == "admin"){
+        this.router.navigate(["Adminportal"]);
+      } else{
+        this.router.navigate(["RandRecipe"]);
+      }
     },
     error =>{
       this.errormessage = "Invalid username or password";
