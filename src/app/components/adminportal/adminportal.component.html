@@ -43,6 +43,7 @@
 </div>
 <div class="p-3 mb-2 bg-info text-white">
   <h2 class="text-center">List of users</h2>
+  <p class="text-center">{{displayMessageDelete}}</p>
 </div>
 <table class="table table-striped">
   <thead class="thead-dark">
@@ -61,8 +62,10 @@
     <td><button class="btn btn-danger" (click)="removeUser(get.id)">Delete</button></td>
   </tr>
 </table>
-
-
+<div class="p-3 mb-2 bg-success text-white">
+<h2 class="text-center"> Update User Table</h2>
+  <p class="text-center">{{displayMessageUpdate}}</p>
+</div>
 <table class="table table-striped">
   <thead class="thead-dark">
     <tr>

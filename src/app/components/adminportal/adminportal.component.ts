@@ -14,6 +14,8 @@ export class AdminportalComponent implements OnInit {
 
   private token = sessionStorage.getItem("token");
   displayMessage: string;
+  displayMessageUpdate: string;
+  displayMessageDelete: string;
 
   constructor(private router: Router, private adminservice: AdminService) { }
 
@@ -63,11 +65,13 @@ export class AdminportalComponent implements OnInit {
 
   updatingUser(userid: number, username: string, password: string, userrole: string){
     this.adminservice.updateUser(userid, username, password, userrole);
+    this.displayMessageUpdate = "User has been updated!";
   }
 
   removeUser(userid: number){
     console.log(userid);
     this.adminservice.deleteUser(userid);
+    this.displayMessageDelete = "User has been deleted!";
   }
 
   submitUser(username: string, password: string, userrole: string) {
