@@ -9,7 +9,7 @@ export class FavoritesApiService {
 
   constructor(private httpClient: HttpClient) { }
     url: string = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';
-    dburl:string = 'http://localhost:8080/RecipeBackEnd/recipes/users/';
+    dburl:string = 'http://34.227.31.157:8080/RecipeBackEnd/recipes/users/';
     private token = sessionStorage.getItem("token");
     private tokenArr: string[];
 
@@ -23,6 +23,7 @@ export class FavoritesApiService {
       this.tokenArr = this.token.split(":");
 
       let user_id= this.tokenArr[1];
+      console.log(user_id);
       return this.httpClient.get(this.dburl + user_id);
     }
 }

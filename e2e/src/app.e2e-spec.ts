@@ -10,11 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-<<<<<<< HEAD
-    expect(page.getTitleText()).toEqual('foodcom app is running!');
-=======
     expect(page.getTitleText()).toEqual('Welcome to project2-login!');
->>>>>>> 3c9e35e30be5b303f3fc544d66d2d3a98a82f9a5
   });
 
   afterEach(async () => {

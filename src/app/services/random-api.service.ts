@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class RandomApiService {
 
   url:string = 'https://www.themealdb.com/api/json/v1/1/random.php';
-  dburl:string = 'http://localhost:8080/RecipeBackEnd/recipes-of-month/';
+  dburl:string = 'http://34.227.31.157:8080/RecipeBackEnd/recipes-of-month/';
 
   constructor(private httpClient: HttpClient) { }
 

@@ -10,13 +10,13 @@ export class AdminService {
   constructor(private httpClient: HttpClient) { }
 
   // url to send requests to the backend.
-  private url: string = "http://localhost:8080/RecipeBackEnd/users";
+  private url: string = "http://34.227.31.157:8080/RecipeBackEnd/users";
   // body to send the username and password.
   private body: string;
   // delete users
-  private deleteurl: string = "http://localhost:8080/RecipeBackEnd/users/";
+  private deleteurl: string = "http://34.227.31.157:8080/RecipeBackEnd/users/";
 
-  private editurl: string = "http://localhost:8080/RecipeBackEnd/users/edit/";
+  private editurl: string = "http://34.227.31.157:8080/RecipeBackEnd/users/edit/";
 
   private httpOptions = {
     headers: new HttpHeaders({"Content-Type": "application/json"}),
@@ -27,7 +27,7 @@ export class AdminService {
   successMessage: string;
 
   updateUser(userid: number, username: string, password: string, userrole: string){
-    this.body = JSON.stringify({userid:userid, username:username, password:password, userrole:userrole});
+    this.body = JSON.stringify({id:userid, username:username, password:password, userrole:userrole});
     this.httpClient.put(`${this.editurl}`,this.body,this.httpOptions).subscribe();
   }
 

@@ -16,7 +16,7 @@ export class RecipeByNameSearchService {
   }
 
   saverecipes(data){
-    return this.httpClient.post("http://recipebackend-env.3fcysiv2nc.us-east-2.elasticbeanstalk.com/recipes" , data);
+    return this.httpClient.post("http://34.227.31.157:8080/RecipeBackEnd/recipes" , data);
   }
 
 }
