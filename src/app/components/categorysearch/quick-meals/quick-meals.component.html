@@ -1,0 +1,26 @@
+<app-categorysearch></app-categorysearch>
+<h1> QUICK MEALS </h1>
+
+<table>
+  <tr>
+    <th> NAME </th>
+    <th> IMAGE </th>
+    <th> INSTRUCTIONS </th>
+  </tr>
+
+  <tr *ngFor= "let recipe of meals">
+        <td>{{recipe.title}}</td>
+        <td><img src="{{recipe.image}}" height="150" width="170"></td>
+        <div *ngIf="recipe.analyzedInstructions[0] != undefined">
+          <td>
+            <ol>
+                <li *ngFor="let steps of recipe.analyzedInstructions['0'].steps">
+                      {{ steps.step }}
+                </li>
+                <li>Preparation time: {{recipe.readyInMinutes}} mins</li>
+            </ol>
+          </td>
+        </div>
+  </tr>
+
+</table>
